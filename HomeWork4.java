@@ -18,25 +18,25 @@ public class HomeWork4 {
         System.out.println(dequeNum2);
 
         // Одно или два числа должны быть отрицательными.
-        //вызов методов сложения с учётом размера и минуса
+        // вызов методов сложения с учётом размера и минуса
         if ((num1 > 0 && num2 > 0) || (num1 < 0 && num2 < 0)) {
-        Deque<Integer> result = sumNumbers(dequeNum1, dequeNum2);
-        System.out.println(result);
+            Deque<Integer> result = sumNumbers(dequeNum1, dequeNum2);
+            System.out.println(result);
         } else if (num1 < 0 && num2 > 0 && dequeNum2.size() > dequeNum1.size()) {
-        Deque<Integer> result2 = sumnegativNumbers(dequeNum2, dequeNum1);
-        System.out.println(result2);
-        } else if (num2 < 0 && num1 > 0 && dequeNum2.size() > dequeNum1.size()) {
-        Deque<Integer> result2 = sumnegativNumbers(dequeNum2, dequeNum1);
-        System.out.println("-" + result2);
-        } else if (num2 < 0 && num1 > 0 && dequeNum2.size() < dequeNum1.size()) {
-        Deque<Integer> result3 = sumnegativNumbers(dequeNum1, dequeNum2);
-        System.out.println(result3);
-        }else if (num1 < 0 && num2 > 0 && dequeNum2.size() < dequeNum1.size()) {
-        Deque<Integer> result3 = sumnegativNumbers(dequeNum1, dequeNum2);
-        System.out.println("-" + result3);
+            Deque<Integer> result2 = sumnegativNumbers(dequeNum2, dequeNum1);
+            System.out.println(result2);
+        } else if (num2 < 0 && dequeNum2.size() > dequeNum1.size()) {
+            Deque<Integer> result2 = sumnegativNumbers(dequeNum2, dequeNum1);
+            System.out.println("-" + result2);
+        } else if (num2 < 0 && dequeNum2.size() < dequeNum1.size()) {
+            Deque<Integer> result3 = sumnegativNumbers(dequeNum1, dequeNum2);
+            System.out.println(result3);
+        } else if (num1 < 0 && dequeNum2.size() < dequeNum1.size()) {
+            Deque<Integer> result3 = sumnegativNumbers(dequeNum1, dequeNum2);
+            System.out.println("-" + result3);
         }
 
-        //умножение с учётом ввода отрицательного числа
+        // умножение с учётом ввода отрицательного числа
         if (num1 < 0 ^ num2 < 0) {
             Deque<Integer> result4 = multiply(dequeNum1, dequeNum2);
             System.out.println("-" + result4);
