@@ -99,9 +99,8 @@ public class HomeWork4 {
         Deque<Integer> result = new ArrayDeque<>();
         int inMind = 0;
         while (!deque1.isEmpty() || !deque2.isEmpty()) {
-            //Если очередь deque не пуста, то из нее удаляется первый элемент 
-            //с помощью метода removeFirst() и сохраняется в переменной num. 
-            //В противном случае переменной num присваивается значение ноль.
+            //Если очередь deque не пуста, то num = removeFirst() 
+            //в противном случае num = 0.
             int num1 = deque1.isEmpty() ? 0 : deque1.removeFirst();
             int num2 = deque2.isEmpty() ? 0 : deque2.removeFirst();
             int diff = num1 - num2 - inMind;
